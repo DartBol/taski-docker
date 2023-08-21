@@ -19,6 +19,7 @@ services:
       - static_volume:/backend_static
   frontend:
     env_file: .env
+    image: miligos/taski_frontend
     command: cp -r /app/build/. /frontend_static/
     volumes:
       - static_volume:/frontend_static
